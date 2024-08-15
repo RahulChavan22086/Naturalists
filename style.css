@@ -1,0 +1,672 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Apply the background image to the entire page */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('biology-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    background-attachment: fixed;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    cursor: default;
+}
+
+/* Ensure main content is not obscured */
+main {
+    padding-top: 100px;
+    z-index: 1;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00203F; /* Deep Navy Blue */
+    color: #EFD469; /* Pale Gold accent */
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0;
+    color: #EFD469; /* Pale Gold text */
+    font-size: 3.5rem;
+}
+
+nav ul li a {
+    color: #EFD469;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: ff6f61; 
+    text-decoration: underline;
+}
+
+header .logo {
+    height: 100px;
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+/* General Content Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* About Us Section Styling */
+.about-us {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Blended transparent background */
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #EFD469; /* Pale gold text color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Link styling applied to the h2 */
+.about-link {
+    text-decoration: none;
+}
+
+.about-link:hover h2 {
+    color: #ff6f61; /* Slightly warmer color on hover */
+    transform: scale(1.05); /* Slightly scales up the text */
+}
+
+/* Adding subtle background animation */
+.about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    border-radius: 15px;
+    animation: pulse 5s infinite alternate;
+}
+
+/* Keyframe animation */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+/* Gallery Section Styling */
+.gallery-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Blended transparent background */
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #EFD469; /* Pale gold text color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Link styling applied to the h2 */
+.gallery-link {
+    text-decoration: none;
+}
+
+.gallery-link:hover h2 {
+    color: #ff6f61; /* Slightly warmer color on hover */
+    transform: scale(1.05); /* Slightly scales up the text */
+}
+
+/* Adding subtle background animation */
+.gallery-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    border-radius: 15px;
+    animation: pulse 5s infinite alternate;
+}
+
+/* Keyframe animation */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Events Section */
+.events-section {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.events-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #EFD469;
+}
+
+/* Upcoming Events Section Styling */
+.upcoming-events {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Blended transparent background */
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.upcoming-events h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #EFD469; /* Pale gold text color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.upcoming-events p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Link styling applied to the h2 */
+.events-link {
+    text-decoration: none;
+}
+
+.events-link:hover h2 {
+    color: #ff6f61; /* Slightly warmer color on hover */
+    transform: scale(1.05); /* Slightly scales up the text */
+}
+
+/* Adding subtle background animation */
+.upcoming-events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    border-radius: 15px;
+    animation: pulse 5s infinite alternate;
+}
+
+/* Keyframe animation */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+.events-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.events-list li {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.events-list li strong {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.events-list li p {
+    font-size: 1.1rem;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+
+
+/* Highlights Section */
+.highlights {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background for better blend */
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to enhance readability */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 1100px; /* Limit the width for better readability */
+}
+
+.highlights h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #EFD469;
+    letter-spacing: 1.2px;
+}
+
+.highlight-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* A dark overlay on the card */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.events-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.events-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.events-list li:last-child {
+    border-bottom: none;
+}
+
+.events-list li strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #EFD469;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.resources-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.resources-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.resource-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.resource-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.resource-item p {
+    font-size: 1.1rem;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.resource-item .btn {
+    margin-top: 15px;
+    display: inline-block;
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resource-item .btn:hover {
+    background-color: #ff8566;
+    transform: translateY(-3px);
+}
+
+.resource-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Blended transparent background */
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #EFD469; /* Pale gold text color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Link styling applied to the h2 */
+.contact-link {
+    text-decoration: none;
+}
+
+.contact-link:hover h2 {
+    color: #ff6f61; /* Slightly warmer color on hover */
+    transform: scale(1.05); /* Slightly scales up the text */
+}
+
+/* Adding subtle background animation */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    border-radius: 15px;
+    animation: pulse 5s infinite alternate;
+}
+
+/* Keyframe animation */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #EFD469;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #EFD469;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black; /* Darker background */
+    color: #ddd;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+.footer-content p {
+    margin: 0;
+    color: white;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.footer-email a {
+    color: #EFD469; /* Color of the email link */
+    text-decoration: none;
+}
+
+.footer-email a:hover {
+    color: #ff6f61; /* Color of the email link on hover */
+    text-decoration: underline;
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .footer-logos {
+        margin-bottom: 10px;
+    }
+}
