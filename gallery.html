@@ -24,18 +24,31 @@
     </header>
 
     <main>
-    <section class="content">
-        <h2>Biology Club in Action</h2>
-        <p>Take a look at some of the activities and events we've been involved in.</p>
-
-        <div class="gallery">
-            <img src="images/event1.jpg" alt="Event 1">
-            <img src="images/event2.jpg" alt="Event 2">
-            <img src="images/event3.jpg" alt="Event 3">
-            <img src="images/event4.jpg" alt="Event 4">
-        </div>
-    </section>
+        <section class="content gallery-section">
+            <h2>Naturalists in Action</h2>
+            <p>Take a look at some of the activities and events we've been involved in.</p>
+    
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="eve1.jpg" alt="Event 1">
+                    <div class="caption">Field Trip to the Botanical Garden</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="eve2.jpg" alt="Event 2">
+                    <div class="caption">Guest Lecture: Advances in Genetic Engineering</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="eve3.jpg" alt="Event 3">
+                    <div class="caption">Workshop: Microscopy Techniques</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="eve4.jpg" alt="Event 4">
+                    <div class="caption">Hands-On Workshop: DNA Extraction</div>
+                </div>
+            </div>
+        </section>
     </main>
+    
 
     <footer>
         <div class="footer-content">
@@ -49,5 +62,12 @@
     </footer>
     
     <script src="main.js"></script>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content">
+        <div class="caption"></div>
+    </div>
+
 </body>
 </html>
