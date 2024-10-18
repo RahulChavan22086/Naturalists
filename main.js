@@ -16,12 +16,12 @@ counters.forEach(counter => {
         const target = +counter.getAttribute('data-count');
         const count = +counter.innerText;
 
-        const speed = 150; // Change this value to adjust speed
+        const speed = 100; // Change this value to adjust speed
         const increment = target / speed;
 
         if (count < target) {
             counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 30);
+            setTimeout(updateCount, speed);
         } else {
             counter.innerText = target;
         }
@@ -79,3 +79,56 @@ lightbox.addEventListener('click', (e) => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const eventLinks = document.querySelectorAll('.event-link');
+    const modal = document.getElementById('event-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const closeButton = document.querySelector('.close-btn');
+
+    const eventDetails = {
+        1: {
+            title: "Field Trip to the Botanical Garden",
+            description: "Join us on a guided tour through the local botanical garden. Explore diverse plant species and learn about conservation efforts."
+        },
+        2: {
+            title: "Guest Lecture: Advances in Genetic Engineering",
+            description: "Our guest speaker will discuss the latest breakthroughs in genetic engineering, including CRISPR and gene therapy advancements."
+        },
+        3: {
+            title: "Workshop: Microscopy Techniques",
+            description: "Hands-on workshop focused on advanced microscopy techniques. Learn to use various microscopy tools and methods."
+        },
+        4: {
+            title: "Club Social: Meet and Greet",
+            description: "Get to know your fellow biology enthusiasts at our casual meet and greet event. Snacks and refreshments provided."
+        }
+    };
+
+    eventLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const eventId = link.getAttribute('data-event');
+            const eventData = eventDetails[eventId];
+
+            if (eventData) {
+                modalTitle.textContent = eventData.title;
+                modalDescription.textContent = eventData.description;
+                modal.style.display = 'flex';
+            }
+        });
+    });
+
+    // Close modal when the close button is clicked
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of the modal content
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
